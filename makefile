@@ -19,6 +19,7 @@ git-tag:
 	git tag "v$(VERSION)"
 
 git-release:
+	git push
 	git push --tags
 
 docker-build:
