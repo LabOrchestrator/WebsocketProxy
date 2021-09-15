@@ -23,10 +23,12 @@ git-release:
 	git push --tags
 
 docker-build:
-	docker build -t username/repo:$(VERSION)
+	docker build -t biolachs2/lab_orchestrator_ws_proxy:v$(VERSION) .
+	docker build -t biolachs2/lab_orchestrator_ws_proxy:latest .
 
 docker-push:
-	docker push username/repo:$(VERSION)
+	docker push biolachs2/lab_orchestrator_ws_proxy:v$(VERSION)
+	docker push biolachs2/lab_orchestrator_ws_proxy:latest
 
-release: git-tag git-release pypi-build pypi-push
+release: docker-build pypi-build git-tag docker-push pypi-push git-release
 
