@@ -1,8 +1,19 @@
-![](https://img.shields.io/librariesio/release/pypi/lab-orchestrator-ws-proxy)
+[![Status](https://img.shields.io/pypi/status/lab-orchestrator-ws-proxy)](https://pypi.org/project/lab-orchestrator-ws-proxy/)
+[![Version](https://img.shields.io/docker/v/biolachs2/lab_orchestrator_ws_proxy)](https://hub.docker.com/r/biolachs2/lab_orchestrator_ws_proxy/tags)
+[![License](https://img.shields.io/github/license/laborchestrator/WebsocketProxy)](https://github.com/LabOrchestrator/WebsocketProxy/blob/main/LICENSE)
+[![Issues](https://img.shields.io/github/issues/laborchestrator/WebsocketProxy)](https://github.com/laborchestrator/WebsocketProxy/issues)
+[![Downloads](https://img.shields.io/docker/pulls/biolachs2/lab_orchestrator_ws_proxy)](https://hub.docker.com/r/biolachs2/lab_orchestrator_ws_proxy)
+[![Dependencies](https://img.shields.io/librariesio/release/pypi/lab-orchestrator-ws-proxy)](https://libraries.io/pypi/lab-orchestrator-ws-proxy)
+[![Docs](https://img.shields.io/readthedocs/websocketproxy)](https://websocketproxy.readthedocs.io/en/latest/)
+
 
 # Websocket Proxy
 
 Program that contains a Proxy for KubeVirts VNC Websockets. It uses JWT Tokens for Authentication and to transfer data.
+
+[Github](https://github.com/LabOrchestrator/WebsocketProxy)  
+[PyPi](https://pypi.org/project/lab-orchestrator-ws-proxy/)  
+[Docker Hub](https://hub.docker.com/repository/docker/biolachs2/lab_orchestrator_ws_proxy)  
 
 ## Installation
 
