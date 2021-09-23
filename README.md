@@ -41,6 +41,7 @@ To start this program you need to set some environment variables first:
 - `LOCAL_DEV_MODE`: If False, it's assumed that this is run inside Kubernetes. If True secure connections are disabled. Default: False
 - `HOST`: The host this proxy runs on. Default: 0.0.0.0
 - `PORT`: The port this proxy runs on. Default: 5001
+- `HOST_PATH_PREFIX`: Prefix that is removed from the host path.
 - `KUBERNETES_SERVICE_HOST`: Host where to proxy the websockets. Inside of Kubernetes this has a preset default value.
 - `KUBERNETES_SERVICE_PORT`: Port where to proxy the websockets. Inside of Kubernetes this has a preset default value.
 - `LOGLEVEL`: Python Loglevel to use. Default: INFO
