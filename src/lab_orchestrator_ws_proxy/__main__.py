@@ -27,6 +27,7 @@ def main():
     local_dev_mode = bool(strtobool(os.environ.get("LOCAL_DEV_MODE", "False")))
     ws_proxy_host = os.environ.get("HOST", "0.0.0.0")
     ws_proxy_port = int(os.environ.get("PORT", "5001"))
+    host_path_prefix = os.environ.get("HOST_PATH_PREFIX", None)
     kubernetes_service_host = os.environ["KUBERNETES_SERVICE_HOST"]
     kubernetes_service_port = os.environ["KUBERNETES_SERVICE_PORT"]
     if local_dev_mode:
@@ -36,9 +37,10 @@ def main():
         # kubernetes mode
         remote_url = f"wss://{kubernetes_service_host}:{kubernetes_service_port}"
     ws = ws_proxy_lib.WebsocketProxy(remote_url=remote_url, api_path=api_path, local_dev_mode=local_dev_mode,
-                                     secret_key=secret_key)
+                                     secret_key=secret_key, host_path_prefix=host_path_prefix)
     logging.info("Starting WebsocketProxy")
     logging.info(f"Local Dev Mode: {local_dev_mode}")
+    logging.info(f"Host Path Prefix: {host_path_prefix}")
     logging.info(f"Kubernetes Service Host: {kubernetes_service_host}")
     logging.info(f"Kubernetes Service Port: {kubernetes_service_port}")
     logging.info(f"Remote Url: {remote_url}")
